@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="fr" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balam Web</title>
+  <link href="/dist/output.css" rel="stylesheet">
+  <!-- Script pour le theme Dark -->
+  <script>
+    // Lors du chargement de la page ou lors du changement de thème, il est préférable d'ajouter ces lignes dans `head` pour éviter FOUC
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
+</head>
+<body class="bg-white dark:bg-gray-950">
+
+
+
+
+<script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+<script src="./darkswitcher.js"></script>
+</body>
+</html>
